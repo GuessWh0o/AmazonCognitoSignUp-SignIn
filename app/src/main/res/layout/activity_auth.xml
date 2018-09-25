@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    tools:context=".ui.AuthActivity">
+
+    <ImageView
+        android:id="@+id/iv_amazon"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/amazon_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+        android:scrollbarSize="@dimen/auth_scrollBar_size"
+        android:scrollbarTrackVertical="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_amazon"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/glassyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/auth_fill_screen" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/loginEd"
+                        style="@style/login_input"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/auth_login"
+                        android:inputType="phone"
+                        android:labelFor="@id/nameEd"
+                        android:lineSpacingExtra="@dimen/auth_text_size"
+                        android:textSize="@dimen/auth_text_size"
+                        android:textStyle="normal"
+                        tools:layout_marginTop="@dimen/auth_margin_top" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/auth_margin_top">
+
+                    <EditText
+                        android:id="@+id/passEd"
+                        style="@style/login_input"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/auth_ed_pass_hint"
+                        android:inputType="textPassword"
+                        android:labelFor="@id/passEd"
+                        android:lineSpacingExtra="@dimen/auth_text_size"
+                        android:textSize="@dimen/auth_text_size"
+                        android:textStyle="normal" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/regBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/auth_reg_h"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/auth_margin"
+                    android:layout_marginTop="@dimen/auth_margin_top"
+                    android:background="@drawable/button_custom_red"
+                    android:enabled="true"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:text="@string/auth_btn_reg"
+                    android:textSize="@dimen/auth_regText_size" />
+
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="@dimen/auth_btnLogin_w"
+                    android:layout_height="@dimen/auth_btnLogin_h"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/auth_margin_end_bottom"
+                    android:layout_marginLeft="@dimen/auth_margin"
+                    android:layout_marginRight="@dimen/auth_margin"
+                    android:layout_marginTop="@dimen/auth_login_margin_top"
+                    android:background="@drawable/button_custom_cyan"
+                    android:enabled="false"
+                    android:text="@string/auth_btn_text_not_fill"
+                    android:textColor="@android:color/white"
+                    tools:layout_marginBottom="@dimen/auth_margin_end_bottom" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/progressBar_size"
+                android:layout_height="@dimen/progressBar_size"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

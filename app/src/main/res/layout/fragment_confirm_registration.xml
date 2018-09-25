@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="@dimen/confirmReg_marginBottom"
+    android:background="@color/colorGrey"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/confirmReg_margin"
+    android:paddingBottom="@dimen/confirmReg_margin"
+    android:paddingEnd="24dp"
+    android:paddingStart="24dp"
+    tools:context=".ui.ConfirmRegistrationFragment" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/confirmReg_margin"
+        android:text="@string/confirmReg_text" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/confirmCode"
+        style="@style/login_input"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/confirmReg_margin"
+        android:lineSpacingExtra="@dimen/auth_text_size"
+        android:textColor="@color/colorBlack"
+        android:inputType="numberSigned"
+        android:textSize="@dimen/auth_text_size" />
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_custom_cyan"
+        android:layout_marginTop="@dimen/confirmReg_margin"
+        android:text="@string/confirm" />
+
+</LinearLayout>
